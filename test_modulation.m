@@ -1,5 +1,5 @@
 close all
-
+clc
 
 T = 20; % number of observed time samples
 vT = (1:T)'; % vector of time stamps
@@ -18,7 +18,7 @@ ts_mod = v_mod*ones(1,n_sub) + randn(T,n_sub);
 figure;
 subplot(211); hold on;
 plot(vT,ts_mod,'color','r')
-plot(vT,v_mod,'color',[0.5,0,0],ls='--')
+plot(vT,v_mod,'color',[0.5,0,0],'linestyle','--')
 subplot(212);
 plot(vT,ts_rand,'color','k')
 xlabel('time')

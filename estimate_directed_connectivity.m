@@ -1,5 +1,5 @@
 clear all;
-
+clc
 
 % network and simulation parameters
 
@@ -64,7 +64,7 @@ std_noise = 0.5; % standard deviation for normal noise added to config 4
 amp_noise = 0.5; % amplitude of noise for config 4
 
 % all configs
-C *= 0.8; % homogeneous scaling
+C = C*0.8; % homogeneous scaling
 I0 = 0.05; % homogeneous inputs
 
 
@@ -102,7 +102,7 @@ for i_net=1:n_net
     for i=1:N
         ts_X(:,i) = ts_X(:,i) - X(i);
     end
-    #print(ts_X.mean(0))
+    %print(mean(ts_X,1))
 
     % empirical covariances
     Q0 = (ts_X(1:nTs-1,:)'*ts_X(1:nTs-1,:)) / (nTs-2);
@@ -207,5 +207,5 @@ for i_net=1:n_net
         
 end
 
-savefig('fig_est_th')
+%savefig('fig_est_th')
 
