@@ -1,0 +1,11 @@
+name: comp_model_env 
+dependencies:
+- ipython=6.1.0
+- jupyter_client=5.1.0
+- jupyter_core=4.3.0
+- numpy=1.13.1
+- python=3.6.2
+- scikit-learn=0.19.0
+- scipy=0.19.1
+- seaborn=0.8
+- spyder=3.2.3
